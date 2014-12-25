@@ -1,3 +1,0 @@
-s3fs:
-  image: simpledrupalcloud/s3fs
-  hostname: s3fs
