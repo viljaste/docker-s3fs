@@ -11,4 +11,6 @@ RUN apt-get update
 RUN /src/build.sh
 RUN /src/clean.sh
 
+VOLUME ["/s3fs/data"]
+
 CMD ["/src/run.sh"]
