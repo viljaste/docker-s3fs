@@ -13,15 +13,14 @@
       -e BUCKET="bucket" \
       -e MOUNT_POINT="mount point" \
       -d \
-      simpledrupalcloud/s3fs:dev
+      simpledrupalcloud/s3fs:latest
 
 ## Build the image
 
     TMP="$(mktemp -d)" \
       && git clone http://git.simpledrupalcloud.com/simpledrupalcloud/docker-s3fs.git "${TMP}" \
       && cd "${TMP}" \
-      %% git checkout dev \
-      && sudo docker build -t simpledrupalcloud/s3fs:dev . \
+      && sudo docker build -t simpledrupalcloud/s3fs:latest . \
       && cd -
 
 ## License
