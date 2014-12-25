@@ -10,9 +10,9 @@ Using the `docker` command:
       --cap-add mknod \
       --cap-add sys_admin \
       --device=/dev/fuse \
-      -e AWSACCESSKEYID \
-      -e AWSSECRETACCESSKEY \
-      -e BUCKET=bucket \
+      -e AWS_ACCESS_KEY_ID="aws access key id" \
+      -e AWS_SECRET_ACCESS_KEY="aws secret access key" \
+      -e BUCKET="bucket" \
       -d \
       simpledrupalcloud/s3fs
       
