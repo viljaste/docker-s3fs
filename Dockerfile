@@ -13,4 +13,4 @@ RUN /src/clean.sh
 
 VOLUME ["/s3fs/data"]
 
-CMD ["/src/run.sh"]
+CMD ["/bin/su", "-", "root", "-mc", "/src/run.sh"]

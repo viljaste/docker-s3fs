@@ -7,6 +7,12 @@ Using the `docker` command:
     CONTAINER="s3fs" && sudo docker run \
       --name "${CONTAINER}" \
       -h "${CONTAINER}" \
+      --cap-add mknod \
+      --cap-add sys_admin \
+      --device=/dev/fuse \
+      -e AWSACCESSKEYID \
+      -e AWSSECRETACCESSKEY \
+      -e BUCKET=bucket \
       -d \
       simpledrupalcloud/s3fs
       
